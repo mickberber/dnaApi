@@ -7,7 +7,7 @@ var data = require('./db.js');
 
 app.get('/', function(req, res) {
   var dnaData = data.retrieveOne();
-  res.send(dnaData);
+  res.send(JSON.stringify(dnaData));
 });
 
 app.listen(port, function() {
